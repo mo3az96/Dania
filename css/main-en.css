@@ -1,0 +1,104 @@
+.lang-bar .lang {
+  float: right;
+}
+.lang-bar .langSpan {
+  margin-left: 0;
+  margin-right: 7px;
+}
+
+.head .sign_div {
+  margin-left: 22px;
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .head .sign_div {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.head .sign_div.cart span {
+  left: -9px;
+  right: auto;
+}
+.head .sign_div.cart .price {
+  margin-left: 4px;
+  margin-right: 0;
+}
+
+.head .search-btn {
+  right: 30px;
+  left: auto;
+}
+
+.search-pop .closebtn {
+  left: auto;
+  right: 0;
+  margin-left: 0;
+  margin-right: 25px;
+}
+
+.foot .news-btn {
+  left: auto;
+  right: 28px;
+}
+
+.copyrights .copy img {
+  margin-left: 7px;
+  margin-right: 0;
+}
+
+.menu-btn i {
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.xs-nav .closebtn {
+  right: 0px;
+  left: auto;
+  margin-right: 25px;
+  margin-left: 0;
+}
+.xs-nav .main-nav {
+  padding-right: 0;
+  padding-left: 30px;
+}
+.xs-nav .lang {
+  left: 0px;
+  right: auto;
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+.download a:last-child {
+  margin-left: 5px;
+}
+
+@keyframes inscreen {
+  0% {
+    left: -100%;
+    right: auto;
+  }
+  100% {
+    left: 0;
+    right: auto;
+  }
+}
+.inscreen {
+  animation: inscreen 0.4s ease forwards;
+}
+
+@keyframes outscreen {
+  0% {
+    left: 0;
+    right: auto;
+  }
+  100% {
+    left: -100%;
+    right: auto;
+  }
+}
+.outscreen {
+  animation: outscreen 0.5s ease forwards;
+}
+
+/*# sourceMappingURL=main-en.css.map */

@@ -1,0 +1,248 @@
+.main-slider {
+    .owl-nav {
+        position: absolute;
+        margin-top: 0;
+        bottom: 57%;
+        height: 0;
+        width: 100%;
+
+        button {
+            &[class*=owl-] {
+                margin: 0;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                @include transition(all 0.3s ease-in-out);
+                background-color: rgba(#000, 0.4);
+                color: #fff;
+                font-size: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+
+                &:hover {
+                    background-color: rgba($maincolor, 1);
+                }
+            }
+
+            &.owl-prev {
+                right: 50px;
+            }
+
+            &.owl-next {
+                left: 50px;
+            }
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 42px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width: 768px) {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            width: 8px;
+            height: 9px;
+            margin: 0 5px;
+
+            &.active {
+                span {
+                    opacity: 1;
+                    background: $maincolor;
+                    @include transition(all 0.3s ease-in-out);
+                }
+            }
+
+            span {
+                width: 8px;
+                height: 9px;
+                margin: 0;
+                opacity: 0.4;
+                background: #000;
+                @include transition(all 0.3s ease-in-out);
+
+                &:hover {
+                    background: $maincolor;
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+
+                span {
+                    opacity: 1;
+                    background: $maincolor;
+                }
+            }
+        }
+    }
+}
+
+.specials {
+    margin-top: 55px;
+
+    @media (max-width: 991px) {
+        margin-top: 20px;
+    }
+
+    h1 {
+        @extend %sliderh1;
+    }
+}
+
+.best-selling {
+    margin-top: 82px;
+
+    @media (max-width: 991px) {
+        margin-top: 25px;
+    }
+
+    h1 {
+        @extend %sliderh1;
+    }
+}
+
+.new-arrival {
+    margin-top: 50px;
+
+    @media (max-width: 991px) {
+        margin-top: 30px;
+    }
+
+    h1 {
+        @extend %sliderh1;
+    }
+}
+
+.special-offers {
+    margin-top: 90px;
+
+    @media (max-width: 991px) {
+        margin-top: 30px;
+    }
+
+    h1 {
+        @extend %sliderh1;
+    }
+}
+
+.Product-slider {
+    .product {
+        border: 1px solid #ededed;
+        border-radius: 15px;
+        max-width: 216px;
+        overflow: hidden;
+        margin: auto;
+
+        &:hover {
+            img {
+                transform: translateY(-15px);
+            }
+        }
+
+
+        .item-img {
+            height: 192px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: auto;
+                @include transition(all 0.3s ease-in-out);
+            }
+        }
+
+        .info {
+            padding-top: 8px;
+            text-align: center;
+
+            .product-name {
+                a {
+                    font-size: 14px;
+                    color: $seccolor;
+                    margin-bottom: 1px;
+                }
+            }
+
+            span {
+                font-size: 18px;
+                font-family: semibold;
+                color: $maincolor;
+                display: inline-block;
+                direction: ltr;
+
+                &.sale {
+                    text-decoration: line-through;
+                    margin-left: 8px;
+                    color: #c7c7c7;
+                }
+            }
+        }
+
+        button {
+            background-color: #c1bfbf;
+            width: 136px;
+            height: 32px;
+            border-radius: 25px;
+            color: #fff;
+            margin-top: 7px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            font-family: semibold;
+            @extend %btnhover;
+
+            i {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    .owl-dots {
+
+        .owl-dot {
+            width: 7px;
+            height: 7px;
+            margin: 0 5px;
+
+            &.active {
+                span {
+                    opacity: 1;
+                    background: $maincolor;
+                    @include transition(all 0.3s ease-in-out);
+                }
+            }
+
+            span {
+                width: 7px;
+                height: 7px;
+                margin: 0;
+                opacity: 0.4;
+                background: #000;
+                @include transition(all 0.3s ease-in-out);
+
+                &:hover {
+                    background: $maincolor;
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+
+                span {
+                    opacity: 1;
+                    background: $maincolor;
+                }
+            }
+        }
+    }
+}

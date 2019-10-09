@@ -1,0 +1,195 @@
+.head {
+    display: none;
+}
+
+.lang-bar {
+    padding-top: 15px;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    .lang {
+        float: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .langSpan {
+        margin-left: 7px;
+        font-size: 13px;
+        font-family: semibold;
+        color: #a8a8a8;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $seccolor;
+        }
+    }
+}
+
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #f0f0f0;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-top: -15px;
+
+        @media (max-width: 768px) {
+            margin-top: 15px;
+        }
+    }
+
+    .sign-bar {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            margin-top: 25px;
+            justify-content: space-between;
+            width: 175px;
+        }
+    }
+
+    .sign-icon {
+        font-size: 17px;
+        color: $seccolor;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+        z-index: 10;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    .sign_div {
+        margin-right: 22px;
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            .sign-icon {
+                color: $maincolor;
+            }
+        }
+
+        &.user {
+            position: relative;
+
+            &:hover {
+                .drop-menu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.cart {
+            position: relative;
+
+            span {
+                position: absolute;
+                border-radius: 50%;
+                background-color: $maincolor;
+                width: 14px;
+                height: 14px;
+                font-size: 12px;
+                color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: semibold;
+                top: -7px;
+                right: -9px;
+            }
+
+            .price {
+                margin-right: 4px;
+                font-size: 14px;
+                font-family: semibold;
+                color: $seccolor;
+                display: inline-block;
+
+                @media (max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .search-icon {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    .drop-menu {
+        position: absolute;
+        width: 132px;
+        height: 71px;
+        left: 50%;
+        top: 25px;
+        transform: translateX(-50%);
+        z-index: 9;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all 0.3s ease-in-out);
+
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-width: 6px;
+            border-color: transparent transparent #ffffff;
+            border-style: solid;
+            top: -12px;
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        li {
+            width: 100%;
+
+            &:first-child {
+                border-bottom: 1px solid #ededed;
+                padding-bottom: 8px;
+                margin-bottom: 6px;
+            }
+        }
+
+        a {
+            color: #a1a1a1;
+            @include transition(all 0.3s ease-in-out);
+
+            &:hover {
+                color: $maincolor;
+            }
+        }
+    }
+}

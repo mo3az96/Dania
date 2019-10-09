@@ -1,0 +1,110 @@
+.nav {
+    // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    .main-nav {
+        display: flex;
+        height: 48px;
+        align-items: center;
+        justify-content: space-between;
+
+        //padding-left: 32px;
+        @media (max-width: 991px) {
+            display: none;
+        }
+
+        a {
+            font-size: 14px;
+            font-family: semibold;
+            color: $seccolor;
+            @include transition(all 0.3s ease-in-out);
+
+            &:hover {
+                color: $maincolor;
+            }
+        }
+    }
+}
+
+.menu-btn {
+    display: none;
+    width: 100%;
+    background-color: $maincolor;
+    font-size: 16px;
+    color: #fff;
+    font-family: bold;
+    margin-bottom: 10px;
+
+    @media (max-width: 991px) {
+        display: block;
+    }
+
+    .menu-bar {
+        display: none;
+        height: 45px;
+
+        @media (max-width: 991px) {
+            display: flex;
+            align-items: center;
+        }
+
+        i {
+            margin-left: 5px;
+        }
+    }
+}
+
+.xs-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba($pinkcolor, $alpha: 0.7);
+    background-color: rgba(#000, 0.75);
+    z-index: 9;
+
+    .main-xs-nav {
+        display: flex;
+        position: fixed;
+        z-index: 10;
+        background-color: #fff;
+        width: 260px;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 25px;
+        font-size: 15px;
+        cursor: pointer;
+        left: 0px;
+        margin-left: 25px;
+    }
+
+    .main-nav {
+        padding-top: 70px;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-right: 30px;
+
+
+        li {
+            margin-bottom: 20px;
+
+        }
+    }
+
+    .lang {
+        position: absolute;
+        top: 25px;
+        cursor: pointer;
+        right: 0px;
+        margin-right: 25px;
+    }
+}
